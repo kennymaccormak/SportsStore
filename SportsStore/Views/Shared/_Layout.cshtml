@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-inverse" role="navigation">
+            <a class="navbar-brand" href="#">Sports Store</a>
+        </div>
+        <div class="row panel">
+            <div id="categories" class="col-xs-offset-1 col-xs-2">
+                @await Component.InvokeAsync("NavigationMenu")
+            </div>
+            <div class="col-xs-8">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>
